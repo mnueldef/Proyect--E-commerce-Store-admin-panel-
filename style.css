@@ -1,0 +1,17 @@
+@media screen and (min-width: 1024px){
+    main{
+        grid-template-columns: repeat(4,minmax(200px, 1fr));
+    }
+} 
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    position: fixed;
+}
+main{
+    display: grid;
+    grid-template-columns:1fr;
+}
