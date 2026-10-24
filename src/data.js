@@ -15,4 +15,4 @@ let cheese = new item(4,"cheese", 1500, "Alimentos", "https://www.pexels.com/pho
 let cookies = new item(5,"cookies", 3000, "Alimentos", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
 let soap = new item(6,"soap", 1000, "Higiene", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
 
-const inventary =[rice, milk, arepas, cheese, cookies, soap];
+const inventory =[rice, milk, arepas, cheese, cookies, soap];

@@ -1,7 +1,7 @@
 const mainElement = document.querySelector("main");
 
 inventory.forEach((item) => {
-    mainElemtent.innerHTML += `
+    mainElement.innerHTML += `
     <div class="item">
         <img src="${item.image}" alt="${item.title}">
         <h2>${item.title}</h2>
