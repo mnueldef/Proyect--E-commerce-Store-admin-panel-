@@ -8,11 +8,12 @@ class item{
     }       
 }
 
-let rice = new item(1,"rice", 1000, "Alimentos", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
-let milk = new item(2,"milk", 5000, "Alimentos", "https://www.pexels.com/photo/white-milk-in-glass-1640777/");
-let arepas = new item(3,"arepas", 2000, "Alimentos", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
-let cheese = new item(4,"cheese", 1500, "Alimentos", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
-let cookies = new item(5,"cookies", 3000, "Alimentos", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
-let soap = new item(6,"soap", 1000, "Higiene", "https://www.pexels.com/photo/white-rice-in-bowl-1640777/");
+
+let rice = new item(1,"rice", 1000, "Alimentos", "https://picsum.photos/200");
+let milk = new item(2,"milk", 5000, "Alimentos", "https://picsum.photos/200");
+let arepas = new item(3,"arepas", 2000, "Alimentos", "https://picsum.photos/200");
+let cheese = new item(4,"cheese", 1500, "Alimentos", "https://picsum.photos/200");
+let cookies = new item(5,"cookies", 3000, "Alimentos", "https://picsum.photos/200");
+let soap = new item(6,"soap", 1000, "Higiene", "https://picsum.photos/200");
 
 const inventory =[rice, milk, arepas, cheese, cookies, soap];
