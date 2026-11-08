@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
     color: var(--text-color);
@@ -8,7 +8,8 @@ body{
     --color-background: #a8dadc;
     --color-button: #e63946;
 }
-header{
+
+header {
     display: flex;
     position: sticky;
     top: 0;
@@ -18,15 +19,17 @@ header{
     padding: 20px;
     z-index: 100;
 }
-main{
+
+main {
     display: grid;
-    grid-template-columns:1fr;
+    grid-template-columns: 1fr;
     gap: 20px;
     background-color: var(--color-background);
     width: 100%;
 }
-.item{
-    display:flex;
+
+.item {
+    display: flex;
     flex-direction: column;
     max-width: 100%;
     background-color: var(--color-secondary);
@@ -35,34 +38,116 @@ main{
     border-radius: 10px;
     cursor: pointer;
 }
-.item:hover{
+
+.item:hover {
     animation: select 0.3s ease-in-out forwards;
 
 }
-.item img{
+
+.item img {
     border-radius: 8px;
     max-height: 200px;
     object-fit: cover;
 }
-.btn-add{
+
+.btn-add {
     background-color: var(--color-button);
     outline: none;
     border: none;
     padding: 8px;
 }
-.item button:hover{
+
+.item button:hover {
     opacity: 0.85;
 }
-@keyframes select{
-    0%{
+
+/* ******ECOM 6 ************/
+/* Sidebar lateral oculto por defecto */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 2000;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    /* Transición para animar la entrada/salida */
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Clase para mostrar el sidebar */
+.cart-sidebar.open {
+    transform: translateX(0);
+}
+
+/* Encabezado del carrito */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estructura Flexbox para cada ítem del carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.cart-item-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-item-title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.cart-item-price {
+    font-size: 14px;
+    color: #666;
+    margin: 4px 0 0 0;
+}
+
+/********************************************************/
+@keyframes select {
+    0% {
         transform: scale(1);
     }
-    100%{
+
+    100% {
         transform: scale(1.05);
     }
 }
-@media screen and (min-width: 1024px){
-    main{
-        grid-template-columns: repeat(3,minmax(100px, 1fr));
+
+@media screen and (min-width: 1024px) {
+    main {
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
     }
-} 
+}
