@@ -30,8 +30,38 @@ document.addEventListener("click", (event) => {
       // Agregamos al arreglo cart
       cart.push(selectedProduct);
 
-      // Actualizamos el DOM llamando a la función
       updateCartCounter();
+      renderCartItems();
     }
   }
 });
+
+//**********************ECOM 6***************
+// Selección de elementos del DOM
+const cartSidebar = document.querySelector("#cart-sidebar");
+const cartBtn = document.querySelector("#cart-counter");
+const closeCartBtn = document.querySelector("#close-cart-btn");
+
+// Abrir el carrito al hacer clic en el botón del Header
+cartBtn.addEventListener("click", () => {
+  cartSidebar.classList.add("open");
+});
+
+// Cerrar el carrito al hacer clic en el botón 'X'
+closeCartBtn.addEventListener("click", () => {
+  cartSidebar.classList.remove("open");
+});
+
+const renderCartItems = () => {
+  const cartItemsContainer = document.querySelector("#cart-items");
+  
+  cartItemsContainer.innerHTML = cart.map(item => `
+    <div class="cart-item">
+      <img class="cart-item-img" src="${item.image}" alt="${item.title}">
+      <div class="cart-item-info">
+        <h4 class="cart-item-title">${item.title}</h4>
+        <span class="cart-item-price">$${item.price}</span>
+      </div>
+    </div>
+  `).join("");
+};
